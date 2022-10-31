@@ -1,0 +1,6 @@
+FROM openjdk:11.0-jdk
+ENV TZ=America/Lima
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+COPY build/libs/demo-0.0.1-SNAPSHOT.jar demo.jar
+EXPOSE 8080
+CMD java -Dcom.sun.management.jmxremote -noverify ${JAVA_OPTS} -jar demo.jar
