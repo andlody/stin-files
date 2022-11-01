@@ -1,4 +1,4 @@
-package {{package}}.controller;
+package pe.promart.ms.controller;
 
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
